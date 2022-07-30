@@ -1,0 +1,20 @@
+[package]
+name = "node-lua"
+version = "0.0.1"
+authors = ["i0x0"]
+license = "ISC"
+edition = "2018"
+exclude = ["index.node"]
+
+[lib]
+crate-type = ["cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rlua = "0.19.4"
+
+[dependencies.neon]
+version = "0.10"
+default-features = false
+features = ["napi-6"]

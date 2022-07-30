@@ -1,0 +1,19 @@
+{
+  "name": "node-lua",
+  "version": "0.0.1",
+  "description": "lua scripts in nodejs",
+  "main": "index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "build": "cargo-cp-artifact -nc index.node -- cargo build --message-format=json-render-diagnostics",
+    "build-debug": "npm run build --",
+    "build-release": "npm run build -- --release",
+    "install": "npm run build-release",
+    "test": "cargo test"
+  },
+  "author": "i0x0",
+  "license": "ISC",
+  "devDependencies": {
+    "cargo-cp-artifact": "^0.1"
+  }
+}
